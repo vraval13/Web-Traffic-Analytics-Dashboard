@@ -64,3 +64,26 @@ This dashboard delivers a comprehensive analysis of web traffic patterns across 
 Conversion Rate (%) = 
 DIVIDE(SUM('website_analytics_dataset'[Conversion]), SUM('website_analytics_dataset'[Page Views])) * 100
 ```
+
+```
+Conversion_MoM_Growth =
+VAR CurrentMonth = CALCULATE(SUM('website_analytics_dataset'[Conversion]))
+VAR PreviousMonth = CALCULATE(SUM('website_analytics_dataset'[Conversion]), DATEADD('website_analytics_dataset'[Date], -1, MONTH))
+RETURN DIVIDE(CurrentMonth - PreviousMonth, PreviousMonth, 0)
+```
+
+# ⚙️ Installation & Usage
+## 📦 Prerequisites
+- Power BI Desktop (latest version)
+- Access to session-level web traffic dataset (CSV or direct source)
+
+## 🛠️ Setup Instructions
+- Clone this repository
+- Open the .pbix file in Power BI Desktop
+- Load and refresh the dataset
+- Explore and interact with the 3 dashboard pages
+- Filter by device, traffic source, or region to gain new insights
+
+# 👨‍💻 Contributor
+- Vyom Raval
+- 📧 ravalvyom17@gmail.com
