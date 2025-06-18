@@ -32,3 +32,35 @@ This dashboard delivers a comprehensive analysis of web traffic patterns across 
 - Interactive slicers for page navigation and filtering
 - Consistent iconography and responsive layout design
 
+# 📁 Project Structure
+## 🔄 Data Layer (Power Query)
+- Cleaned and transformed raw session-level web data
+- Applied filters, custom columns, and engagement logic
+- Created MonthYear, Device Category, and Traffic groupings
+
+## 📐 Model Layer (DAX Measures)
+- Conversion Rate, Quality Score, Traffic Effectiveness
+- Conversion_MoM_Growth, Engagement Score
+- IsBounce, ReturningSessions, AvgTimePerPage
+
+## 🎨 Visuals Layer
+- KPI Cards (Conversion, Bounce, Duration, Sessions)
+- Pie & Donut Charts (Device, Source)
+- Line & Bar Charts (Page Views, Conversion Trends)
+- TreeMap & Matrix Views (Device x Day engagement)
+
+# 🧮 Data Model
+## Dimension Tables:
+- Date (with Day, Month, Year, Day Name)
+- Device Type / Category
+- Traffic Source
+- Country / Region
+
+## Fact Table:
+- website_analytics_dataset (containing session duration, page views, bounce %, conversion, etc.)
+
+# 🔑 Sample DAX Measures
+```
+Conversion Rate (%) = 
+DIVIDE(SUM('website_analytics_dataset'[Conversion]), SUM('website_analytics_dataset'[Page Views])) * 100
+```
