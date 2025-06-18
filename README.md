@@ -1,6 +1,6 @@
 # 📊 Web-Traffic-Analytics-Dashboard
 An interactive and dynamic Power BI dashboard that visualizes web traffic, user engagement, and conversion analytics across multiple dimensions. The report incorporates key performance indicators (KPIs), session insights, bounce behavior, and device-specific engagement trends — all structured to support high-level decision-making for digital teams and analysts.
-
+ 
 # 🚀 Overview
 This dashboard delivers a comprehensive analysis of web traffic patterns across three core pages: Web Traffic Overview, Engagement & Devices, and Traffic & Conversions. It visualizes session-level behaviors including bounce rate, time on page, returning sessions, device category usage, and conversion effectiveness — enabling businesses to understand their users, optimize channels, and improve site performance.
 
